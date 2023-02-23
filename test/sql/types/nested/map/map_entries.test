@@ -31,12 +31,6 @@ SELECT map_entries(map([5], [NULL]))
 ----
 [{'k': 5, 'v': NULL}]
 
-# Pair NULL
-# query I
-# select map_entries(map_from_entries([NULL::ROW(a text, b integer)]))
-# ----
-# NULL
-
 # Mixed NULLs
 query I
 SELECT map_entries(map_from_entries(
@@ -75,12 +69,6 @@ query I
 SELECT map_entries(map([5], [NULL]))
 ----
 [{'k': 5, 'v': NULL}]
-
-# Pair NULL
-# query I
-# select map_entries(map_from_entries([NULL::ROW(a text, b integer)]))
-# ----
-# NULL
 
 # Mixed NULLs
 query I
